@@ -15,7 +15,7 @@ const Tasks = ({ tasks, hideDone, removeTask, toggleTaskDone}) => (
           {task.done ? "✔" :""}
         </button>
         <p className ={`tasksItem__paragraph${task.done ? " tasks__content--done" :""}`}>
-          {task.content}
+          {task.id} - {task.content}
         </p>
         <button
           className="taskList__button taskList__button--delete"
