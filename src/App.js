@@ -16,15 +16,18 @@ const getInitialTasks = () => {
 
 function App() {
   const [hideDone, setHideDone] = useState(false);
+  
+  const toggleHideDone = () => {
+    setHideDone (hideDone => !hideDone)
+  };
+
   const [tasks, setTasks] = useState(getInitialTasks);
 
  useEffect(()=> {
   localStorage.setItem("tasks", JSON.stringify(tasks));
  }, [tasks]);
 
-  const toggleHideDone = () => {
-    setHideDone (hideDone => !hideDone)
-  };
+ 
 
   const removeTask = (id) => {
     setTasks(tasks => tasks.filter(task => task.id !== id));
