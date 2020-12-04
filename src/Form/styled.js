@@ -5,33 +5,31 @@ export const StyledForm = styled.form`
   grid-template-columns: 1fr auto;
   grid-gap: 20px;
 
-  @media(max-width: 767px){
+  @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px){
     grid-template-columns: 1fr;
   }
 `;
 
-export const StyledInput = styled.input`
+export const Input = styled.input`
   padding: 10px;
-  border: 1px solid #EEEDEF;
+  border: 1px solid ${({ theme }) => theme.colors.athensGray};
 `;
 
 export const Button = styled.button`
-  background: hsl(180, 100%, 20%);
-  color: #EEEDEF;
+  background:${({ theme }) => theme.colors.teal};
+  color:${({ theme }) => theme.colors.athensGray};
   border: none;
   padding: 10px;
   cursor: pointer;
   transition: 0.5s;
 
   &:hover{
-    background: hsl(180, 100%, 25%);
-    border: none;
+    filter: brightness(110%);
     transform: scale(1.1);
   }
 
   &:active{
-    background: hsl(180, 100%, 30%);
-    border: none;
+    filter: brightness(120%);
   }
 
 `;

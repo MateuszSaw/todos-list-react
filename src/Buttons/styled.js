@@ -7,22 +7,25 @@ export const Wrapper = styled.div`
 
 export const Button = styled.button`
   border: none;
-  color: hsl(180, 100%, 20%);
+  color: ${({ theme }) => theme.colors.teal};
   background: none;
   cursor: pointer;
   transition: color 1s;
 
-  @media(max-width: 767px){
+  @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px){
     flex-basis: 100%;
         margin: 10px;
   }
 
   &:hover{
-    color: hsl(180, 100%, 25%);
+    filter: brightness(110%);
+  }
+  &:active{
+    filter: brightness(120%);
   }
 
   &:disabled{
-    color: #EEEDEF;
+    color: ${({ theme }) => theme.colors.athensGray};
   }
 
 `;
