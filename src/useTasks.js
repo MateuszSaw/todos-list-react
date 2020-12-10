@@ -46,10 +46,10 @@ const [tasks, setTasks] = useState(getInitialTasks);
   };
 
   return ({
-    tasks: tasks,
-    removeTask: removeTask,
-    toggleTaskDone: toggleTaskDone,
-    setAllDone: setAllDone,
-    addNewTask: addNewTask,
+    tasks,
+    removeTask,
+    toggleTaskDone,
+    setAllDone,
+    addNewTask,
   });
 }
