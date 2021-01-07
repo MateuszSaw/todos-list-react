@@ -1,10 +1,14 @@
 import React from "react";
-import { List, Item, Content, Button } from "./styled";
+import { List, Item, Content, Button, StyledLink } from "./styled";
 import { useSelector, useDispatch } from "react-redux";
-import { selectTasks, toggleTaskDone, removeTask, selectHideDone } from "../tasksSlice";
+import { toggleTaskDone, removeTask, selectHideDone, selectTasksByQuery } from "../../tasksSlice";
+import searchQueryParamName from "../searchQueryParamName";
+import { toTask } from "../../../../routes";
+import { useQueryParameter } from "../Search/queryParameters";
 
 const TaskList = () => {
-  const tasks = useSelector(selectTasks);
+  const query = useQueryParameter(searchQueryParamName);
+  const tasks = useSelector(state => selectTasksByQuery(state, query));
   const hideDone = useSelector(selectHideDone);
 
   const dispatch = useDispatch();
@@ -23,7 +27,9 @@ const TaskList = () => {
             {task.done ? "✔" :""}
           </Button>
           <Content done={task.done}>
-            {task.content}
+            <StyledLink to={toTask({ id: task.id })}>
+              {task.content}
+            </StyledLink>
           </Content>
           <Button
             remove
@@ -36,4 +42,4 @@ const TaskList = () => {
     </List>
   )
 };
-export default TaskList
+export default TaskList;

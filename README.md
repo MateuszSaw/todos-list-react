@@ -1,6 +1,27 @@
 # Tasks List
+**Link**  https://mateuszsaw.github.io/todos-list-react/
 
-Description 
+### Description
+A very simple to-do list. You can add your to-do tasks, check off done and delete.
+### Technologies and methodologies
+- HTML
+- CSS
+- JS
+- React
+- React Router
+- React Redux
+- Redux Toolkit
+- Redux Saga
+- Styled Components
+- JSX
+- create-react-app
+- localStorage
+
+### Author
+Mateusz Sawicki future Frontend Programmer from Gdańsk.
+
+### Contanct
+leave me a message here : mateuszsawicki1509@gmail.com
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
