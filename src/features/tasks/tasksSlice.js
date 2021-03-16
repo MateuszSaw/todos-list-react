@@ -60,7 +60,6 @@ export const selectExampleTasksLoading = state => selectTasksState(state).loadin
 export const selectIsEveryTaskDone = state => selectTasks(state).every(({ done }) => done);
 export const selectAreTaskEmpty = state => selectTasks(state).length === 0;
 
-
 export const getTaskById = (state, taskId) =>
 selectTasks(state).find(({ id }) => id === taskId);
 

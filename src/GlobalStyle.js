@@ -10,7 +10,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body{
-    background: #EEEDEF;
+    background: ${({ theme }) => theme.colors.AthensGray};
     font-family: 'Lato', sans-serif;
   }
 `;

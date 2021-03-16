@@ -4,11 +4,14 @@ import Header from "../../../common/Header";
 import Container from "../../../common/Container";
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { getTaskById } from "../tasksSlice";
+import { getTaskById, selectTasks } from "../tasksSlice";
 
 function TaskPage() {
   const { id } =useParams();
   const task = useSelector(state => getTaskById(state, id));
+  const listaZadan = useSelector(selectTasks);
+  console.log(listaZadan);
+  // console.log(task);
   return (
     <Container>
       <Header title="Szczegóły zadania"/>
@@ -18,8 +21,6 @@ function TaskPage() {
             <strong>Ukończono:</strong> {task.done ? "Tak" : "Nie"}
           </>
         }
-
-
       />
     </Container>
   );

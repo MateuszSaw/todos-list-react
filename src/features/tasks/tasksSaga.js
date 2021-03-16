@@ -12,14 +12,14 @@ function* fetchExampleTasksHandler(){
     yield call(alert, "coś poszło nie tak!");
     yield put(exampleTasksError());
   }
-}
+};
 
 function* saveTasksInLocalStorageHandler() {
   const tasks = yield select(selectTasks);
   yield call(saveTasksInLocalStorage, tasks);
-}
+};
 
 export function* tasksSaga(){
   yield takeLatest(fetchExampleTasks.type, fetchExampleTasksHandler);
   yield takeEvery("*", saveTasksInLocalStorageHandler);
-}
+};
