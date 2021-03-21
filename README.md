@@ -17,6 +17,40 @@ A very simple to-do list. You can add your to-do tasks, check off done and delet
 - create-react-app
 - localStorage
 
+### How to use
+
+Add new task
+
+![](readme/add-new-task.gif)
+
+Delete task
+
+![](readme/delete-task.gif)
+
+toggle done on/off
+
+![](readme/toggle-task-done.gif)
+
+Download example tasks
+
+![](readme/download-example-task.gif)
+
+Search for a task
+
+![](readme/search.gif)
+
+Show details
+
+![](readme/show-details.gif)
+
+Hide completed tasks
+
+![](readme/hide-done.gif)
+
+Complete all tasks
+
+![](readme/done-all.gif)
+
 ### Author
 Mateusz Sawicki future Frontend Programmer from Gdańsk.
 
