@@ -6,7 +6,7 @@ import TaskPage from './features/tasks/TaskPage';
 import Navigation from "./Navigation";
 import { toAuthor, toTask, toTasks } from './routes';
 
-export default () => (
+const App = () => (
   <HashRouter>
     <Navigation />
       <Switch>
@@ -25,3 +25,5 @@ export default () => (
       </Switch>
   </HashRouter>
 );
+
+export default App;

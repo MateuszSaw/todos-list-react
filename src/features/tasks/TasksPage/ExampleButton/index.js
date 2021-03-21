@@ -3,7 +3,7 @@ import Button from "../../Button";
 import { fetchExampleTasks, selectExampleTasksLoading } from "../../tasksSlice";
 import { useDispatch, useSelector } from "react-redux";
 
-export default () => {
+const ExampleButton =  () => {
   const dispatch = useDispatch();
   const loading = useSelector(selectExampleTasksLoading);
 
@@ -16,3 +16,5 @@ export default () => {
   </Button>
   );
 };
+
+export default ExampleButton;

@@ -2,7 +2,7 @@ import React from "react";
 import { Item, List, StyledNavLink } from "./styled";
 import { toAuthor, toTasks } from "../routes";
 
-export default () => {
+const Navigation = () => {
   return (
     <nav>
       <List>
@@ -16,3 +16,5 @@ export default () => {
     </nav>
   );
 };
+
+export default Navigation;
