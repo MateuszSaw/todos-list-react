@@ -54,7 +54,7 @@ Complete all tasks
 ### Author
 Mateusz Sawicki future Frontend Programmer from Gdańsk.
 
-### Contanct
+### Contact
 leave me a message here : mateuszsawicki1509@gmail.com
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
